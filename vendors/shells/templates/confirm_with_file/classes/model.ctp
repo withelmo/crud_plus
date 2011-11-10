@@ -41,7 +41,7 @@ if ($displayField): ?>
         var $bindFields = array(
                                    array('field' => 'file',
                                          'tmpPath'  => '<?php echo TMP; ?>',
-                                         'filePath' => '<?php echo WWW_ROOT; ?>/files/',
+                                         'filePath' => '<?php echo WWW_ROOT; ?>files/',
                                          ),
                                );
 
