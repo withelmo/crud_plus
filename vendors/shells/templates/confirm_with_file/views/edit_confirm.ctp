@@ -49,7 +49,7 @@
 	</fieldset>
 <?php echo "<?php echo \$this->Form->create('{$modelClass}');?>\n";?>
 <?php echo "\t\t<?php echo \$this->Form->input('dummy',array('type' => 'hidden')); ?>\n"; ?>
-<button type="button" onclick="location.href='<?php echo "<?php echo \$this->Html->url(array('action' => 'add'));?>"; ?>'">
+<button type="button" onclick="location.href='<?php echo "<?php echo \$this->Html->url(array('action' => 'edit', \$data['{$modelClass}']['id']));?>"; ?>'">
     <?php echo "<?php echo __('Back');?>"; ?>
 </button>
 <?php
@@ -60,7 +60,7 @@
 	<h3><?php echo "<?php __('Actions'); ?>"; ?></h3>
 	<ul>
 
-<?php if (strpos($action, 'add') === false): ?>
+<?php if (strpos($action, 'add_comfirm') === false): ?>
 		<li><?php echo "<?php echo \$this->Html->link(__('Delete', true), array('action' => 'delete', \$this->Form->value('{$modelClass}.{$primaryKey}')), null, sprintf(__('Are you sure you want to delete # %s?', true), \$this->Form->value('{$modelClass}.{$primaryKey}'))); ?>";?></li>
 <?php endif;?>
 		<li><?php echo "<?php echo \$this->Html->link(__('List " . $pluralHumanName . "', true), array('action' => 'index'));?>";?></li>
